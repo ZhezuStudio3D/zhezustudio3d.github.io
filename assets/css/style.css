@@ -465,12 +465,12 @@ textarea{ min-height: 90px; resize: vertical; }
    ========================================================================== */
 .contact-hero{
   text-align:center; padding-top: 150px;
-  background-image: linear-gradient(rgba(253,251,248,0.88), rgba(253,251,248,0.88)), url('../img/pattern_bg.png');
+  background-image: linear-gradient(rgba(253,251,248,0.95), rgba(253,251,248,0.95)), url('../img/pattern_bg.png');
   background-repeat: no-repeat, repeat;
   background-size: cover, 900px auto;
   background-position: center, center top;
 }
-.contact-hero h1, .contact-hero .eyebrow, .contact-hero .lead{ position: relative; }
+.contact-hero h1, .contact-hero .eyebrow, .contact-hero .lead{ position: relative; text-shadow: 0 1px 0 var(--cream); }
 @media (max-width: 720px){
   .contact-hero{ background-size: cover, 560px auto; }
 }
