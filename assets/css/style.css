@@ -277,7 +277,15 @@ section{ padding: 88px 0; position: relative; }
 .footer-grid{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap: 18px; }
 .footer-links{ display:flex; gap: 22px; font-family: var(--font-display); font-weight:700; font-size:14px; }
 .footer-links a:hover{ color: var(--coral-deep); }
-.footer-note{ font-size: 13px; color: rgba(32,31,31,0.5); }
+.footer-note{ font-size: 13px; color: rgba(32,31,31,0.5); margin:0; }
+.footer-social{ display:flex; gap: 12px; }
+.footer-social a{
+  width: 38px; height: 38px; border-radius: 50%;
+  display:flex; align-items:center; justify-content:center;
+  background: var(--cream); border: 1px solid var(--line);
+  color: var(--ink); transition: all .2s ease;
+}
+.footer-social a:hover{ background: var(--coral); border-color: var(--coral); color: #fff; transform: translateY(-2px); }
 
 /* ---- whatsapp float ---- */
 .wa-float{
