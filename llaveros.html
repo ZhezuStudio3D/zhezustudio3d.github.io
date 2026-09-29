@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Llaveros inteligentes NFC — Zhezu Studio 3D</title>
+<meta name="description" content="Llaveros personalizados con chip NFC integrado. Diseña forma, tamaño y color, y cotiza directo por WhatsApp.">
+<link rel="icon" href="assets/img/logo_badge.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="loading-overlay" data-root="./">
+  <div class="loading-grid"></div>
+  <div class="loading-center">
+    <img src="assets/img/mascot_gota.png" alt="">
+    <p>cargando</p>
+  </div>
+  <div class="error-state">
+    <h2>¡whoops! algo salió mal</h2>
+    <p>Parece que la conexión falló al cargar la página. Intenta de nuevo.</p>
+    <button class="btn btn-primary error-retry">Reintentar</button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="assets/img/logo_badge.png" alt="Zhezu Studio 3D">Zhezu</a>
+    <button class="menu-toggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="nav-overlay">
+  <div class="wrap">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="scaneo-3d.html">Scaneo 3D</a></li>
+      <li><a href="llaveros.html" style="color:var(--coral-deep)">Llaveros NFC</a></li>
+      <li><a href="galeria.html">Galería trabajos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-foot">
+      <img src="assets/img/mascot_gota.png" alt="">
+      <div class="nav-social">
+        <a href="https://www.instagram.com/zhezu_studio3d" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@zhezu_studio3d" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://wa.me/573208390714?text=Hola%21%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20Zhezu%20Studio%203D." target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="hero" style="padding-bottom:20px;">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Línea NFC</span>
+      <h1>Llaveros inteligentes. <em>Un toque, y listo.</em></h1>
+      <p class="lead">¿Un llavero que hace más que sostener llaves? Con un chip NFC integrado, cada pieza personalizada comparte tu contacto, tu catálogo o tus redes con solo acercarla a un celular.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#configurador">Diseñar el mío</a>
+        <a class="btn btn-ghost" href="https://wa.me/573208390714?text=Hola%21%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20llaveros%20inteligentes%20NFC." target="_blank" rel="noopener">Preguntar por WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-art reveal">
+      <img class="mascot m1" src="assets/img/mascot_medusa.png" alt="Mascota Zhezu">
+      <img class="mascot m3" src="assets/img/mascot_gota.png" alt="Mascota Zhezu">
+    </div>
+  </div>
+</section>
+
+<section class="grid-bg" style="padding-top:20px;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Para empresas</span>
+      <h2>Un llavero, muchos usos</h2>
+      <p class="sub">La misma pieza puede ser regalo corporativo, souvenir de evento o herramienta de logística.</p>
+    </div>
+    <div class="usecases-grid">
+      <div class="usecase-card reveal">
+        <img src="assets/img/portfolio/llavero_letra.jpg" alt="Llavero personalizado con inicial">
+        <div class="body">
+          <h3>Regalo corporativo</h3>
+          <p>Con el logo o las iniciales de tu empresa — comparte tu contacto o catálogo con un toque.</p>
+        </div>
+      </div>
+      <div class="usecase-card reveal">
+        <img src="assets/img/portfolio/llavero_estrellas.jpg" alt="Llaveros para evento">
+        <div class="body">
+          <h3>Eventos y bodas</h3>
+          <p>Recordatorios personalizados por lote, todos con el mismo diseño y color.</p>
+        </div>
+      </div>
+      <div class="usecase-card reveal">
+        <img src="assets/img/portfolio/llavero_circular.jpg" alt="Llavero de identificación">
+        <div class="body">
+          <h3>Identificación de producto</h3>
+          <p>Etiquetas NFC redondas para inventario, logística o acceso a información.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="configurador-section">
+  <div class="wrap">
+    <div id="configurador" class="reveal">
+      <div class="section-head" style="margin-bottom:8px;">
+        <span class="eyebrow">Pruébalo</span>
+        <h2 style="font-size:30px;">Diseña tu llavero</h2>
+        <p class="sub" style="margin-top:8px;">Elige las opciones y te enviamos la cotización exacta por WhatsApp — sin compromiso.</p>
+      </div>
+
+      <div class="config-layout" style="margin-top:32px;">
+        <div>
+          <div class="config-group">
+            <span class="config-label">Forma</span>
+            <div class="chip-row" id="shapeOptions">
+              <button class="chip active" data-shape="redondo">Redondo</button>
+              <button class="chip" data-shape="corazon">Corazón</button>
+              <button class="chip" data-shape="letra">Letra / inicial</button>
+              <button class="chip" data-shape="libre">Figura a medida</button>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Tamaño <span class="opt">(4 a 10 cm — según complejidad y material disponible)</span></span>
+            <div class="chip-row" id="sizeOptions">
+              <button class="chip" data-size="4">4 cm</button>
+              <button class="chip active" data-size="5">5 cm</button>
+              <button class="chip" data-size="6">6 cm</button>
+              <button class="chip" data-size="8">8 cm</button>
+              <button class="chip" data-size="10">10 cm</button>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Color base</span>
+            <div class="chip-row" id="colorOptions">
+              <span class="swatch active" style="background:#f38487" data-color="Coral" data-hex="#f38487"></span>
+              <span class="swatch" style="background:#201f1f" data-color="Negro" data-hex="#201f1f"></span>
+              <span class="swatch" style="background:#d7cce5" data-color="Lavanda" data-hex="#d7cce5"></span>
+              <span class="swatch" style="background:#f2d6d5" data-color="Blush" data-hex="#f2d6d5"></span>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Chip NFC integrado</span>
+            <div class="chip-row" id="nfcOptions">
+              <button class="chip active" data-nfc="si">Sí, con NFC</button>
+              <button class="chip" data-nfc="no">No, solo llavero</button>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">¿Para qué lo necesitas?</span>
+            <div class="chip-row" id="useOptions">
+              <button class="chip active" data-use="personal">uso personal</button>
+              <button class="chip" data-use="empresa">regalo empresarial</button>
+              <button class="chip" data-use="evento">evento / lote</button>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Imagen de referencia <span class="opt">(opcional)</span></span>
+            <div class="upload-box" id="uploadBox">
+              <input type="file" id="uploadInput" accept="image/*">
+              <p style="margin:0;font-weight:600;">Arrastra una imagen o haz clic para subirla</p>
+              <p style="margin:6px 0 0;font-size:13px;color:rgba(32,31,31,0.5);">Solo se ve aquí como confirmación — no se envía sola a WhatsApp.</p>
+              <div class="upload-preview" id="uploadPreview">
+                <img src="" alt="">
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Notas <span class="opt">(opcional)</span></span>
+            <textarea id="configNotes" placeholder="Cuéntanos cualquier detalle extra: texto, cantidad, fecha límite..."></textarea>
+          </div>
+        </div>
+
+        <div class="config-preview">
+          <div class="preview-shape" id="previewShape">
+            <div class="preview-ring"></div>
+            <span class="preview-chip" id="previewChip" style="position:absolute;bottom:8px;right:6px;font-size:11px;font-weight:700;background:#201f1f;color:#fff;padding:3px 9px;border-radius:100px;font-family:'Comfortaa',sans-serif;">NFC</span>
+          </div>
+          <p class="preview-summary" id="previewSummary"></p>
+          <div class="preview-note">
+            Para asegurar tu pedido, recuerda enviarnos esta información (y tu imagen, si tienes una) directamente por WhatsApp — este visualizador no reemplaza la pieza real, es solo una referencia.
+          </div>
+          <a class="btn btn-primary config-cta" id="configCta" href="#" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="scaneo-3d.html">Scaneo 3D</a>
+        <a href="llaveros.html">Llaveros NFC</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/zhezu_studio3d" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@zhezu_studio3d" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+    <p class="footer-note" style="margin-top:22px;">Designed by Zhezu Studio 3D — © 2026 all rights reserved</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/573208390714?text=Hola%21%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20Zhezu%20Studio%203D." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.82 12.04 21.82C17.5 21.82 21.95 17.37 21.95 11.91C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.68 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.03 20.15C10.56 20.15 9.12 19.76 7.86 19.03L7.56 18.85L4.43 19.67L5.26 16.61L5.06 16.3C4.26 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.04 3.67ZM8.53 6.98C8.37 6.98 8.1 7.04 7.87 7.29C7.65 7.53 7 8.13 7 9.36C7 10.59 7.89 11.78 8.01 11.94C8.14 12.11 9.76 14.68 12.31 15.7C14.43 16.55 14.86 16.38 15.33 16.34C15.8 16.3 16.81 15.74 17.02 15.16C17.24 14.58 17.24 14.08 17.17 13.97C17.11 13.87 16.94 13.81 16.69 13.68C16.44 13.56 15.2 12.95 14.97 12.87C14.74 12.78 14.58 12.74 14.41 12.99C14.25 13.24 13.78 13.81 13.64 13.97C13.5 14.14 13.36 14.16 13.11 14.03C12.86 13.91 12.05 13.64 11.09 12.79C10.35 12.13 9.84 11.32 9.7 11.07C9.56 10.82 9.68 10.69 9.81 10.56C9.92 10.45 10.06 10.26 10.19 10.12C10.31 9.97 10.36 9.87 10.44 9.7C10.53 9.54 10.48 9.4 10.42 9.27C10.36 9.15 9.86 7.9 9.64 7.4C9.44 6.92 9.23 6.98 9.06 6.98H8.53Z" fill="currentColor"/>
+  </svg>
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
