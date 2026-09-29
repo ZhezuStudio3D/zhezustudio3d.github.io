@@ -105,6 +105,8 @@ section{ padding: 88px 0; position: relative; }
 .site-header .wrap{ display:flex; align-items:center; justify-content:space-between; }
 .brand{ display:flex; align-items:center; gap:10px; font-family: var(--font-display); font-weight:700; font-size: 20px; }
 .brand img{ width: 40px; height: 40px; }
+.brand-text{ display:flex; flex-direction:column; line-height:1.08; }
+.brand-text em{ font-style:normal; font-weight:500; font-size:11px; letter-spacing:.03em; color: rgba(32,31,31,0.55); }
 .menu-toggle{
   display:flex; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer;
   padding: 10px; margin: -10px;
@@ -463,11 +465,12 @@ textarea{ min-height: 90px; resize: vertical; }
    ========================================================================== */
 .contact-hero{
   text-align:center; padding-top: 150px;
-  background-image: linear-gradient(rgba(253,251,248,0.6), rgba(253,251,248,0.6)), url('../img/pattern_bg.png');
+  background-image: linear-gradient(rgba(253,251,248,0.88), rgba(253,251,248,0.88)), url('../img/pattern_bg.png');
   background-repeat: no-repeat, repeat;
   background-size: cover, 900px auto;
   background-position: center, center top;
 }
+.contact-hero h1, .contact-hero .eyebrow, .contact-hero .lead{ position: relative; }
 @media (max-width: 720px){
   .contact-hero{ background-size: cover, 560px auto; }
 }
