@@ -270,7 +270,7 @@ section{ padding: 88px 0; position: relative; }
 }
 .cta-banner h2{ color:#fff; font-size: clamp(26px,4vw,38px); }
 .cta-banner p{ color: rgba(255,255,255,0.68); margin: 14px 0 28px; }
-.cta-banner .mascot-corner{ position:absolute; width: 120px; opacity:.9; }
+.cta-banner .mascot-corner{ position:absolute; width: 120px; opacity:.9; filter: invert(1); }
 .cta-banner .mc1{ left: -10px; bottom: -14px; }
 .cta-banner .mc2{ right: -10px; top: -14px; transform: scaleX(-1); }
 
