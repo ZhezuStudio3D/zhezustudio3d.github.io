@@ -14,11 +14,14 @@
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'F12') { e.preventDefault(); return false; }
-    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'i')) { e.preventDefault(); return false; }
-    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'J' || e.key === 'j')) { e.preventDefault(); return false; }
-    if ((e.ctrlKey || e.metaKey) && (e.key === 'U' || e.key === 'u')) { e.preventDefault(); return false; }
-    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'C' || e.key === 'c')) { e.preventDefault(); return false; }
+    // Se usa e.code (tecla física) en vez de e.key porque en Mac, al
+    // presionar Option, e.key cambia a un carácter especial (ej. "ˆ" en
+    // vez de "i"), así que comparar contra "I" fallaba silenciosamente.
+    if (e.key === 'F12' || e.code === 'F12') { e.preventDefault(); return false; }
+    var mod = e.ctrlKey || e.metaKey; // Ctrl en Windows/Linux, Cmd en Mac
+    var modKey = e.shiftKey || e.altKey; // Shift en Windows (Ctrl+Shift+I), Option en Mac (Cmd+Option+I)
+    if (mod && modKey && (e.code === 'KeyI' || e.code === 'KeyJ' || e.code === 'KeyC')) { e.preventDefault(); return false; }
+    if (mod && (e.code === 'KeyU')) { e.preventDefault(); return false; }
   });
 
   document.querySelectorAll('img').forEach(function (img) {
