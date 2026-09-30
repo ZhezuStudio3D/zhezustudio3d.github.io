@@ -1,6 +1,18 @@
 // ZHEZU STUDIO 3D — shared behavior
 (function(){
 
+  /* ---------------- Protección básica de imágenes ---------------- */
+  // Bloquea el clic derecho (guardar imagen como...) y el arrastrar
+  // sobre cualquier <img> del sitio. No es una protección perfecta —
+  // alguien decidido siempre puede hacer una captura de pantalla —
+  // pero evita la descarga casual con un clic o un arrastre.
+  document.addEventListener('contextmenu', function (e) {
+    if (e.target && e.target.tagName === 'IMG') e.preventDefault();
+  });
+  document.addEventListener('dragstart', function (e) {
+    if (e.target && e.target.tagName === 'IMG') e.preventDefault();
+  });
+
   /* ---------------- Loading overlay ---------------- */
   // Fills the tiled pattern with mascot icons, waits for real page load
   // (fonts + images) up to a max timeout, then reveals the page.

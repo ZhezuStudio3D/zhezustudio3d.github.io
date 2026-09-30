@@ -517,3 +517,20 @@ textarea{ min-height: 90px; resize: vertical; }
 @keyframes fall-wobble{ 0%,100%{ transform: translateY(0) rotate(-4deg);} 50%{ transform: translateY(-10px) rotate(4deg);} }
 .error-page h1{ font-size: clamp(28px,5vw,44px); color: var(--coral-deep); }
 .error-page p{ color: rgba(32,31,31,0.6); margin: 14px 0 30px; }
+
+/* ==========================================================================
+   Protección básica de imágenes (evita descarga casual)
+   ========================================================================== */
+img{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none; /* evita el menú "guardar imagen" al mantener presionado en iOS */
+  pointer-events: auto;
+}
+.gallery-item img, .service-card .icon, .hero-art img{
+  -webkit-user-drag: none;
+  user-drag: none;
+}
