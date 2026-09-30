@@ -2,15 +2,27 @@
 (function(){
 
   /* ---------------- Protección básica de imágenes ---------------- */
-  // Bloquea el clic derecho (guardar imagen como...) y el arrastrar
-  // sobre cualquier <img> del sitio. No es una protección perfecta —
-  // alguien decidido siempre puede hacer una captura de pantalla —
-  // pero evita la descarga casual con un clic o un arrastre.
+  // Bloquea el clic derecho en toda la página, el arrastrar imágenes,
+  // y los atajos de teclado para abrir herramientas de desarrollador o
+  // ver el código fuente. No es una protección perfecta — alguien decidido
+  // siempre puede abrir las herramientas de desarrollador desde el menú
+  // del navegador, o hacer una captura de pantalla — pero evita la
+  // descarga casual con un clic, un arrastre o un atajo de teclado.
   document.addEventListener('contextmenu', function (e) {
-    if (e.target && e.target.tagName === 'IMG') e.preventDefault();
+    e.preventDefault();
+    return false;
   });
-  document.addEventListener('dragstart', function (e) {
-    if (e.target && e.target.tagName === 'IMG') e.preventDefault();
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'F12') { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'i')) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'J' || e.key === 'j')) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && (e.key === 'U' || e.key === 'u')) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'C' || e.key === 'c')) { e.preventDefault(); return false; }
+  });
+
+  document.querySelectorAll('img').forEach(function (img) {
+    img.addEventListener('dragstart', function (e) { e.preventDefault(); return false; });
   });
 
   /* ---------------- Loading overlay ---------------- */
