@@ -88,7 +88,7 @@ section{ padding: 88px 0; position: relative; }
 .btn-primary{ background: var(--coral); color: #fff; box-shadow: 0 8px 22px rgba(243,132,135,0.35); }
 .btn-primary:hover{ box-shadow: 0 12px 28px rgba(243,132,135,0.45); }
 .btn-ghost{ background: transparent; border: 1.5px solid var(--ink); color: var(--ink); }
-.btn-ghost:hover{ background: var(--ink); color: #fff; }
+.btn-ghost:hover{ background: var(--coral); color: #fff; border-color: var(--coral); }
 .btn-light{ background: #fff; color: var(--ink); border: 1.5px solid var(--line-strong); }
 
 /* ---- header / nav ---- */
