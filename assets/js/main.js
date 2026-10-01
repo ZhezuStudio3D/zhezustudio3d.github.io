@@ -154,13 +154,13 @@
   /* ---------------- Gallery filters ---------------- */
   var filterRow = document.getElementById('filterRow');
   if (filterRow) {
-    var items = document.querySelectorAll('.gallery-item');
+    var categories = document.querySelectorAll('.gallery-category');
     function applyFilter(f, btn) {
       filterRow.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
       if (btn) btn.classList.add('active');
-      items.forEach(function (item) {
-        var match = f === 'todos' || item.getAttribute('data-cat') === f;
-        item.classList.toggle('hide', !match);
+      categories.forEach(function (section) {
+        var match = f === 'todos' || section.getAttribute('data-cat') === f;
+        section.classList.toggle('hide', !match);
       });
     }
     filterRow.querySelectorAll('.filter-btn').forEach(function (btn) {
