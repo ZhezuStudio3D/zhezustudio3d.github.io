@@ -155,17 +155,27 @@
   var filterRow = document.getElementById('filterRow');
   if (filterRow) {
     var items = document.querySelectorAll('.gallery-item');
+    function applyFilter(f, btn) {
+      filterRow.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+      if (btn) btn.classList.add('active');
+      items.forEach(function (item) {
+        var match = f === 'todos' || item.getAttribute('data-cat') === f;
+        item.classList.toggle('hide', !match);
+      });
+    }
     filterRow.querySelectorAll('.filter-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
-        filterRow.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-        var f = btn.getAttribute('data-filter');
-        items.forEach(function (item) {
-          var match = f === 'todos' || item.getAttribute('data-cat') === f;
-          item.classList.toggle('hide', !match);
-        });
+        applyFilter(btn.getAttribute('data-filter'), btn);
       });
     });
+    // Si se llega desde un enlace tipo galeria.html?cat=producto (por ejemplo
+    // desde una tarjeta de servicio), abre la galería ya filtrada.
+    var params = new URLSearchParams(window.location.search);
+    var catParam = params.get('cat');
+    if (catParam) {
+      var matchBtn = filterRow.querySelector('.filter-btn[data-filter="' + catParam + '"]');
+      if (matchBtn) applyFilter(catParam, matchBtn);
+    }
   }
 
   /* ---------------- Lightbox ---------------- */
