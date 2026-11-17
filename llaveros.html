@@ -183,7 +183,7 @@
 </section>
 
 <!-- =========================================================
-     02 · PLACAS PARA MASCOTAS NFC (CON FOTO REAL DE TU MODELO 3D)
+     02 · PLACAS PARA MASCOTAS NFC (CON SILUETA VECTORIAL DINÁMICA)
 ========================================================= -->
 <section id="mascotas-section" class="grid-bg" style="padding-top:40px; padding-bottom:40px;">
   <div class="wrap">
@@ -210,12 +210,12 @@
 
           <div class="config-group">
             <span class="config-label">Nombre de tu mascota <span class="opt">(en relieve al frente)</span></span>
-            <input type="text" id="petNameInput" value="perrito" maxlength="14" placeholder="Ej: Perrito" style="width:100%; padding:12px 16px; border-radius:12px; border:1px solid rgba(32,31,31,0.14); font-family:var(--font-body); font-size:15px;">
+            <input type="text" id="petNameInput" value="Dante" maxlength="14" placeholder="Ej: Dante" style="width:100%; padding:12px 16px; border-radius:12px; border:1px solid rgba(32,31,31,0.14); font-family:var(--font-body); font-size:15px;">
           </div>
 
           <div class="config-group">
             <span class="config-label">Teléfono / texto al respaldo <span class="opt">(opcional)</span></span>
-            <input type="text" id="petBackText" placeholder="Ej: 310 000 0000 · Si me pierdo llama a mamá" style="width:100%; padding:12px 16px; border-radius:12px; border:1px solid rgba(32,31,31,0.14); font-family:var(--font-body); font-size:15px;">
+            <input type="text" id="petBackText" placeholder="Ej: 311 810 9179 · Si me pierdo llama a mamá" style="width:100%; padding:12px 16px; border-radius:12px; border:1px solid rgba(32,31,31,0.14); font-family:var(--font-body); font-size:15px;">
           </div>
 
           <div class="config-group">
@@ -230,13 +230,51 @@
           </div>
         </div>
 
+        <!-- SILUETA VECTORIAL INTERACTIVA -->
         <div class="config-preview">
-          <div style="width:100%; max-height:240px; border-radius:16px; overflow:hidden; margin-bottom:14px; box-shadow:0 8px 24px rgba(32,31,31,0.12);">
-            <img src="assets/img/portfolio/placa_dante.jpg" alt="Placa de mascota real - Dante" style="width:100%; height:100%; object-fit:cover; display:block;">
+          <div style="position:relative; width:220px; height:172px; margin:0 auto 14px; display:flex; align-items:center; justify-content:center;">
+            <svg id="petSvgPreview" viewBox="0 0 260 200" width="220" height="170" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 8px 16px rgba(32,31,31,0.14)); transition: all .25s ease;">
+              <path id="petBodyPath" fill="#7a5e4d" d="
+                M 42,36
+                C 42,16 64,16 72,33
+                C 82,31 94,31 104,33
+                C 112,16 134,16 134,36
+                C 134,50 130,60 127,66
+                C 148,68 172,68 192,64
+                C 194,50 210,48 216,56
+                C 221,63 217,74 209,77
+                C 224,90 230,114 227,138
+                C 226,151 230,166 223,174
+                C 217,180 202,179 200,169
+                C 199,161 202,148 196,138
+                C 191,150 192,165 184,171
+                C 177,177 165,175 165,167
+                C 165,158 173,146 173,132
+                C 149,138 121,140 100,138
+                C 101,150 104,165 98,175
+                C 92,183 75,183 73,173
+                C 72,163 74,152 72,144
+                C 69,154 69,169 62,177
+                C 55,185 38,185 36,175
+                C 35,165 41,152 39,138
+                C 28,128 24,112 26,98
+                C 12,96 8,79 14,67
+                C 18,59 20,49 22,41
+                C 24,33 35,31 42,36 Z" />
+              <!-- Orejas y hocico en relieve -->
+              <path d="M 48,37 C 49,25 61,25 66,35 Z" fill="rgba(255,255,255,0.16)" />
+              <path d="M 110,35 C 115,25 127,25 128,37 Z" fill="rgba(255,255,255,0.16)" />
+              <ellipse cx="30" cy="77" rx="7.5" ry="4.8" fill="rgba(255,255,255,0.32)" />
+              <circle cx="156" cy="54" r="6" fill="none" stroke="#b8bcc2" stroke-width="2.5" />
+              <!-- Nombre dinámico -->
+              <text id="petSvgName" x="128" y="114" text-anchor="middle" fill="#ffffff" font-family="'Comfortaa', sans-serif" font-weight="700" font-size="24" letter-spacing="0.5" style="text-shadow: 0 2px 3px rgba(0,0,0,0.28);">Dante</text>
+            </svg>
+            <span id="petNfcBadge" style="position:absolute; bottom:4px; right:8px; font-size:10px; font-weight:700; background:#201f1f; color:#fff; padding:4px 10px; border-radius:100px; font-family:'Comfortaa',sans-serif;">NFC + SCAN</span>
           </div>
+
           <p class="preview-summary" id="petPreviewSummary">Placa silueta <strong>Bulldog Francés</strong> (Café) con nombre <strong>"Dante"</strong> — Con perfil digital NFC y símbolo scan.</p>
           <div class="preview-note">
-            Diseño original de Zhezu Studio 3D[cite: 18] (con sello de autor al respaldo). Mándanos la foto de tu mascota por WhatsApp al cotizar.
+            Diseño original de Zhezu Studio 3D (con sello de autor al respaldo). Mándanos la foto de tu mascota por WhatsApp al cotizar.
           </div>
           <a class="btn btn-primary config-cta" id="petConfigCta" href="#" target="_blank" rel="noopener">Cotizar Placa por WhatsApp</a>
         </div>
@@ -246,7 +284,7 @@
 </section>
 
 <!-- =========================================================
-     03 · MANILLAS DE EMERGENCIA NFC (CON GRÁFICO VECTORIAL LIMPIO)
+     03 · MANILLAS DE EMERGENCIA NFC
 ========================================================= -->
 <section id="emergencia-section" style="padding-top:40px; padding-bottom:60px;">
   <div class="wrap">
@@ -290,7 +328,6 @@
           </div>
         </div>
 
-        <!-- GRÁFICO VECTORIAL LIMPIO DE LA MANILLA -->
         <div class="config-preview">
           <div style="width:140px; height:160px; margin:0 auto 14px; display:flex; align-items:center; justify-content:center;">
             <svg viewBox="0 0 120 180" width="110" height="160" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 8px 16px rgba(32,31,31,0.12));">
@@ -395,14 +432,19 @@ document.addEventListener('DOMContentLoaded', () => {
   if(notesEl) notesEl.addEventListener('input', e => { notes = e.target.value; updateLlavero(); });
   updateLlavero();
 
-  // --- 02. PLACAS MASCOTAS ---
-  let petState = { breed: "Bulldog Francés", colorName: "Café" };
+  // --- 02. PLACAS MASCOTAS (SILUETA DINÁMICA) ---
+  let petState = { breed: "Bulldog Francés", name: "Dante", backText: "", colorHex: "#7a5e4d", colorName: "Café" };
+  const petBodyPath = document.getElementById('petBodyPath');
+  const petSvgName = document.getElementById('petSvgName');
   const petSummary = document.getElementById('petPreviewSummary');
   const petCta = document.getElementById('petConfigCta');
 
   function updatePet() {
-    if (!petSummary) return;
-    const nameVal = document.getElementById('petNameInput').value || "Dante";
+    if (!petBodyPath) return;
+    petBodyPath.setAttribute('fill', petState.colorHex);
+    const nameVal = document.getElementById('petNameInput').value.trim() || "Dante";
+    petSvgName.textContent = nameVal;
+
     petSummary.innerHTML = `Placa silueta <strong>${petState.breed}</strong> (${petState.colorName}) con nombre <strong>"${nameVal}"</strong> — Con perfil digital NFC y símbolo scan.`;
     const msg = `Hola Zhezu Studio 3D! Quiero cotizar una *Placa Inteligente para Mascota*:\n• Raza: ${petState.breed}\n• Nombre: ${nameVal}\n• Respaldo: ${document.getElementById('petBackText').value || 'Por definir'}\n• Color: ${petState.colorName}`;
     petCta.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(msg)}`;
@@ -414,7 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }));
   document.querySelectorAll('#petColorOptions .swatch').forEach(s => s.addEventListener('click', () => {
     document.querySelectorAll('#petColorOptions .swatch').forEach(x => x.classList.remove('active'));
-    s.classList.add('active'); petState.colorName = s.dataset.color; updatePet();
+    s.classList.add('active'); petState.colorName = s.dataset.color; petState.colorHex = s.dataset.hex; updatePet();
   }));
   document.getElementById('petNameInput').addEventListener('input', updatePet);
   document.getElementById('petBackText').addEventListener('input', updatePet);
