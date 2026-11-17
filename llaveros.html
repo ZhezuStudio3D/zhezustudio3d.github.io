@@ -74,6 +74,39 @@
   </div>
 </section>
 
+<section class="grid-bg" style="padding-top:20px;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Para empresas y uso diario</span>
+      <h2>Un tag inteligente, muchos usos</h2>
+      <p class="sub">La misma tecnología NFC adaptada a regalos corporativos, mascotas o identificación médica.</p>
+    </div>
+    <div class="usecases-grid">
+      <div class="usecase-card reveal">
+        <img src="assets/img/portfolio/llavero_letra.jpg" alt="Llavero personalizado con inicial">
+        <div class="body">
+          <h3>Regalo corporativo y eventos</h3>
+          <p>Con el logo o las iniciales de tu empresa — comparte tu contacto o catálogo con un toque.</p>
+        </div>
+      </div>
+      <div class="usecase-card reveal">
+        <img src="assets/img/portfolio/placa_dante.jpg" alt="Placas inteligentes para mascotas">
+        <div class="body">
+          <h3>Placas para mascotas</h3>
+          <p>Silueta personalizada de su raza, nombre en relieve y perfil digital de emergencia si se pierde.</p>
+        </div>
+      </div>
+      <div class="usecase-card reveal">
+        <img src="assets/img/portfolio/manillas_emergencia.jpg" alt="Manillas de emergencia NFC">
+        <div class="body">
+          <h3>Contacto de emergencia</h3>
+          <p>Manillas de alta visibilidad con cruz roja y acceso inmediato a datos vitales y teléfonos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- =========================================================
      01 · CONFIGURADOR LLAVEROS NFC
 ========================================================= -->
@@ -150,7 +183,7 @@
 </section>
 
 <!-- =========================================================
-     02 · PLACAS PARA MASCOTAS NFC (CON FOTO REAL DE DANTE)
+     02 · PLACAS PARA MASCOTAS NFC (CON FOTO REAL DE TU MODELO 3D)
 ========================================================= -->
 <section id="mascotas-section" class="grid-bg" style="padding-top:40px; padding-bottom:40px;">
   <div class="wrap">
@@ -197,7 +230,6 @@
           </div>
         </div>
 
-        <!-- FOTO REAL DE DANTE -->
         <div class="config-preview">
           <div style="width:100%; max-height:240px; border-radius:16px; overflow:hidden; margin-bottom:14px; box-shadow:0 8px 24px rgba(32,31,31,0.12);">
             <img src="assets/img/portfolio/placa_dante.jpg" alt="Placa de mascota real - Dante" style="width:100%; height:100%; object-fit:cover; display:block;">
@@ -214,7 +246,7 @@
 </section>
 
 <!-- =========================================================
-     03 · MANILLAS DE EMERGENCIA NFC (CON FOTO REAL DE MANILLAS)
+     03 · MANILLAS DE EMERGENCIA NFC (CON GRÁFICO VECTORIAL LIMPIO)
 ========================================================= -->
 <section id="emergencia-section" style="padding-top:40px; padding-bottom:60px;">
   <div class="wrap">
@@ -258,10 +290,23 @@
           </div>
         </div>
 
-        <!-- FOTO REAL DE LAS MANILLAS -->
+        <!-- GRÁFICO VECTORIAL LIMPIO DE LA MANILLA -->
         <div class="config-preview">
-          <div style="width:100%; max-height:240px; border-radius:16px; overflow:hidden; margin-bottom:14px; box-shadow:0 8px 24px rgba(32,31,31,0.12);">
-            <img src="assets/img/portfolio/manillas_emergencia.jpg" alt="Manillas de emergencia reales" style="width:100%; height:100%; object-fit:cover; display:block;">
+          <div style="width:140px; height:160px; margin:0 auto 14px; display:flex; align-items:center; justify-content:center;">
+            <svg viewBox="0 0 120 180" width="110" height="160" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 8px 16px rgba(32,31,31,0.12));">
+              <!-- Correa superior -->
+              <path d="M44,10 L76,10 L73,52 L47,52 Z" fill="#201f1f"/>
+              <!-- Correa inferior -->
+              <path d="M47,128 L73,128 L76,170 L44,170 Z" fill="#201f1f"/>
+              <!-- Caja protectora central -->
+              <rect x="34" y="48" width="52" height="84" rx="14" fill="#181818" stroke="#333" stroke-width="2"/>
+              <!-- Cruz Roja -->
+              <rect x="56" y="62" width="8" height="24" rx="2" fill="#e53935"/>
+              <rect x="48" y="70" width="24" height="8" rx="2" fill="#e53935"/>
+              <!-- Pastilla NFC -->
+              <rect x="43" y="96" width="34" height="16" rx="8" fill="#ffffff"/>
+              <text x="60" y="107" text-anchor="middle" fill="#181818" font-family="'Satoshi', sans-serif" font-weight="900" font-size="9">NFC )))</text>
+            </svg>
           </div>
           <p class="preview-summary" id="emPreviewSummary">Manilla con <strong>Correa en silicona (colores variados)</strong> — perfil para <strong>Emergencia médica / RH</strong>.</p>
           <div class="preview-note">
@@ -322,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cta = document.getElementById('configCta');
     if (!summary) return;
     summary.innerHTML = `Llavero <strong>${shapeNames[shape]}</strong> de <strong>${size} cm</strong>. Color <strong>${color}</strong>. ${nfc==='si'?'Con chip NFC.':'Sin NFC.'} Uso: ${use}.`;
-    const text = `Hola Zhezu Studio 3D! Quiero cotizar un Llaveros NFC:\n• Forma: ${shapeNames[shape]}\n• Tamaño: ${size} cm\n• Color: ${color}\n• NFC: ${nfc==='si'?'Sí':'No'}\n• Uso: ${use}\n• Notas: ${notes || 'Ninguna'}`;
+    const text = `Hola Zhezu Studio 3D! Quiero cotizar un Llavero NFC:\n• Forma: ${shapeNames[shape]}\n• Tamaño: ${size} cm\n• Color: ${color}\n• NFC: ${nfc==='si'?'Sí':'No'}\n• Uso: ${use}\n• Notas: ${notes || 'Ninguna'}`;
     cta.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(text)}`;
   }
 
@@ -351,7 +396,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateLlavero();
 
   // --- 02. PLACAS MASCOTAS ---
-  let petState = { breed: "Bulldog Francés", name: "Dante", backText: "", colorName: "Café" };
+  let petState = { breed: "Bulldog Francés", colorName: "Café" };
   const petSummary = document.getElementById('petPreviewSummary');
   const petCta = document.getElementById('petConfigCta');
 
