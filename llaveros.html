@@ -77,4 +77,474 @@
 <section class="grid-bg" style="padding-top:20px;">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">Para empresas
+      <span class="eyebrow">Para empresas y uso diario</span>
+      <h2>Un tag inteligente, muchos usos</h2>
+      <p class="sub">La misma tecnología NFC adaptada a regalos corporativos, mascotas o identificación médica.</p>
+    </div>
+    <div class="usecases-grid">
+      <div class="usecase-card reveal">
+        <img src="assets/img/portfolio/llavero_letra.jpg" alt="Llavero personalizado con inicial">
+        <div class="body">
+          <h3>Regalo corporativo y eventos</h3>
+          <p>Con el logo o las iniciales de tu empresa — comparte tu contacto o catálogo con un toque.</p>
+        </div>
+      </div>
+      <div class="usecase-card reveal">
+        <img src="assets/img/portfolio/llavero_estrellas.jpg" alt="Placas inteligentes para mascotas">
+        <div class="body">
+          <h3>Placas para mascotas</h3>
+          <p>Silueta personalizada de su raza, nombre en relieve y perfil digital de emergencia si se pierde.</p>
+        </div>
+      </div>
+      <div class="usecase-card reveal">
+        <img src="assets/img/portfolio/llavero_circular.jpg" alt="Manillas de emergencia NFC">
+        <div class="body">
+          <h3>Contacto de emergencia</h3>
+          <p>Manillas de alta visibilidad con cruz roja y acceso inmediato a datos vitales y teléfonos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     01 · CONFIGURADOR LLAVEROS NFC
+========================================================= -->
+<section id="configurador-section">
+  <div class="wrap">
+    <div id="configurador" class="reveal">
+      <div class="section-head" style="margin-bottom:8px;">
+        <span class="eyebrow">01 · Llaveros NFC</span>
+        <h2 style="font-size:30px;">Diseña tu llavero</h2>
+        <p class="sub" style="margin-top:8px;">Elige las opciones y te enviamos la cotización exacta por WhatsApp — sin compromiso.</p>
+      </div>
+
+      <div class="config-layout" style="margin-top:32px;">
+        <div>
+          <div class="config-group">
+            <span class="config-label">Forma</span>
+            <div class="chip-row" id="shapeOptions">
+              <button class="chip active" data-shape="redondo">Redondo</button>
+              <button class="chip" data-shape="corazon">Corazón</button>
+              <button class="chip" data-shape="letra">Letra / inicial</button>
+              <button class="chip" data-shape="libre">Figura a medida</button>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Tamaño <span class="opt">(4 a 10 cm — según complejidad y material disponible)</span></span>
+            <div class="chip-row" id="sizeOptions">
+              <button class="chip" data-size="4">4 cm</button>
+              <button class="chip active" data-size="5">5 cm</button>
+              <button class="chip" data-size="6">6 cm</button>
+              <button class="chip" data-size="8">8 cm</button>
+              <button class="chip" data-size="10">10 cm</button>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Color base</span>
+            <div class="chip-row" id="colorOptions">
+              <span class="swatch active" style="background:#f38487" data-color="Coral" data-hex="#f38487"></span>
+              <span class="swatch" style="background:#201f1f" data-color="Negro" data-hex="#201f1f"></span>
+              <span class="swatch" style="background:#d7cce5" data-color="Lavanda" data-hex="#d7cce5"></span>
+              <span class="swatch" style="background:#f2d6d5" data-color="Blush" data-hex="#f2d6d5"></span>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Chip NFC integrado</span>
+            <div class="chip-row" id="nfcOptions">
+              <button class="chip active" data-nfc="si">Sí, con NFC</button>
+              <button class="chip" data-nfc="no">No, solo llavero</button>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">¿Para qué lo necesitas?</span>
+            <div class="chip-row" id="useOptions">
+              <button class="chip active" data-use="personal">uso personal</button>
+              <button class="chip" data-use="empresa">regalo empresarial</button>
+              <button class="chip" data-use="evento">evento / lote</button>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Imagen de referencia <span class="opt">(opcional)</span></span>
+            <div class="upload-box" id="uploadBox">
+              <input type="file" id="uploadInput" accept="image/*">
+              <p style="margin:0;font-weight:600;">Arrastra una imagen o haz clic para subirla</p>
+              <p style="margin:6px 0 0;font-size:13px;color:rgba(32,31,31,0.5);">Solo se ve aquí como confirmación — no se envía sola a WhatsApp.</p>
+              <div class="upload-preview" id="uploadPreview">
+                <img src="" alt="">
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Notas <span class="opt">(opcional)</span></span>
+            <textarea id="configNotes" placeholder="Cuéntanos cualquier detalle extra: texto, cantidad, fecha límite..."></textarea>
+          </div>
+        </div>
+
+        <div class="config-preview">
+          <div class="preview-shape" id="previewShape">
+            <div class="preview-ring"></div>
+            <span class="preview-chip" id="previewChip" style="position:absolute;bottom:8px;right:6px;font-size:11px;font-weight:700;background:#201f1f;color:#fff;padding:3px 9px;border-radius:100px;font-family:'Comfortaa',sans-serif;">NFC</span>
+          </div>
+          <p class="preview-summary" id="previewSummary"></p>
+          <div class="preview-note">
+            Para asegurar tu pedido, recuerda enviarnos esta información (y tu imagen, si tienes una) directamente por WhatsApp — este visualizador no reemplaza la pieza real, es solo una referencia.
+          </div>
+          <a class="btn btn-primary config-cta" id="configCta" href="#" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     02 · PLACAS PARA MASCOTAS NFC (SILUETA FIDELIDAD 3D)
+========================================================= -->
+<section id="mascotas-section" class="grid-bg" style="padding-top:40px; padding-bottom:40px;">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-head" style="margin-bottom:8px;">
+        <span class="eyebrow">02 · Placas para Mascotas NFC</span>
+        <h2 style="font-size:30px;">Silueta de su raza, nombre y contacto</h2>
+        <p class="sub" style="margin-top:8px;">Diseñamos la silueta característica de tu peludo (con relieve en su naricita y nombre al frente), teléfono grabado atrás y perfil digital de emergencia al escanear.</p>
+      </div>
+
+      <div class="config-layout" style="margin-top:32px;">
+        <div>
+          <div class="config-group">
+            <span class="config-label">Raza o silueta del perrito</span>
+            <div class="chip-row" id="petBreedOptions">
+              <button class="chip active" data-breed="Bulldog Francés">Bulldog Francés</button>
+              <button class="chip" data-breed="Salchicha">Salchicha</button>
+              <button class="chip" data-breed="Golden / Labrador">Golden / Labrador</button>
+              <button class="chip" data-breed="Schnauzer">Schnauzer</button>
+              <button class="chip" data-breed="Poodle">Poodle</button>
+              <button class="chip" data-breed="Otra raza">Otra raza</button>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Nombre de tu mascota <span class="opt">(va en relieve al frente)</span></span>
+            <input type="text" id="petNameInput" value="Dante" maxlength="14" placeholder="Ej: Dante" style="width:100%; padding:12px 16px; border-radius:12px; border:1px solid rgba(32,31,31,0.14); font-family:var(--font-body); font-size:15px;">
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Teléfono / texto al respaldo <span class="opt">(opcional)</span></span>
+            <input type="text" id="petBackText" placeholder="Ej: 311 810 9179 · Si me pierdo llama a mamá" style="width:100%; padding:12px 16px; border-radius:12px; border:1px solid rgba(32,31,31,0.14); font-family:var(--font-body); font-size:15px;">
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Color de la placa</span>
+            <div class="chip-row" id="petColorOptions">
+              <span class="swatch active" style="background:#7a5e4d" data-color="Café" data-hex="#7a5e4d"></span>
+              <span class="swatch" style="background:#f38487" data-color="Coral" data-hex="#f38487"></span>
+              <span class="swatch" style="background:#201f1f" data-color="Negro" data-hex="#201f1f"></span>
+              <span class="swatch" style="background:#d7cce5" data-color="Lavanda" data-hex="#d7cce5"></span>
+              <span class="swatch" style="background:#f2d6d5" data-color="Blush" data-hex="#f2d6d5"></span>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Perfil digital NFC + Símbolo Scan</span>
+            <div class="chip-row" id="petNfcOptions">
+              <button class="chip active" data-nfc="Sí, con NFC + perfil web">Sí, con NFC + perfil web</button>
+              <button class="chip" data-nfc="Solo placa física">Solo placa física</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="config-preview">
+          <div style="position:relative; width:220px; height:172px; margin:0 auto 14px; display:flex; align-items:center; justify-content:center;">
+            <svg id="petSvgPreview" viewBox="0 0 260 200" width="220" height="170" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 8px 16px rgba(32,31,31,0.14)); transition: all .25s ease;">
+              <!-- Silueta trazada exactamente sobre el modelo 3D de Dante -->
+              <path id="petBodyPath" fill="#7a5e4d" d="
+                M 42,36
+                C 42,16 64,16 72,33
+                C 82,31 94,31 104,33
+                C 112,16 134,16 134,36
+                C 134,50 130,60 127,66
+                C 148,68 172,68 192,64
+                C 194,50 210,48 216,56
+                C 221,63 217,74 209,77
+                C 224,90 230,114 227,138
+                C 226,151 230,166 223,174
+                C 217,180 202,179 200,169
+                C 199,161 202,148 196,138
+                C 191,150 192,165 184,171
+                C 177,177 165,175 165,167
+                C 165,158 173,146 173,132
+                C 149,138 121,140 100,138
+                C 101,150 104,165 98,175
+                C 92,183 75,183 73,173
+                C 72,163 74,152 72,144
+                C 69,154 69,169 62,177
+                C 55,185 38,185 36,175
+                C 35,165 41,152 39,138
+                C 28,128 24,112 26,98
+                C 12,96 8,79 14,67
+                C 18,59 20,49 22,41
+                C 24,33 35,31 42,36 Z" />
+              <!-- Relieve interno de las orejas -->
+              <path d="M 48,37 C 49,25 61,25 66,35 Z" fill="rgba(255,255,255,0.16)" />
+              <path d="M 110,35 C 115,25 127,25 128,37 Z" fill="rgba(255,255,255,0.16)" />
+              <!-- Relieve de la naricita -->
+              <ellipse cx="30" cy="77" rx="7.5" ry="4.8" fill="rgba(255,255,255,0.32)" />
+              <!-- Nombre en relieve al frente -->
+              <text id="petSvgName" x="128" y="114" text-anchor="middle" fill="#ffffff" font-family="'Comfortaa', sans-serif" font-weight="700" font-size="24" letter-spacing="0.5" style="text-shadow: 0 2px 3px rgba(0,0,0,0.28);">Dante</text>
+            </svg>
+            <span id="petNfcBadge" style="position:absolute; bottom:4px; right:8px; font-size:10px; font-weight:700; background:#201f1f; color:#fff; padding:4px 10px; border-radius:100px; font-family:'Comfortaa',sans-serif;">NFC + SCAN</span>
+          </div>
+
+          <p class="preview-summary" id="petPreviewSummary">Placa silueta <strong>Bulldog Francés</strong> (Café) con nombre <strong>"Dante"</strong> — Con perfil digital NFC y símbolo scan.</p>
+          <div class="preview-note">
+            Diseño original de Zhezu Studio 3D (con sello de autor al respaldo). Si quieres una silueta exacta de tu mascota, mándanos su foto por WhatsApp al cotizar.
+          </div>
+          <a class="btn btn-primary config-cta" id="petConfigCta" href="#" target="_blank" rel="noopener">Cotizar Placa por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     03 · MANILLAS DE EMERGENCIA NFC (SIN APPLE WATCH / SILICONA O VELCRO)
+========================================================= -->
+<section id="emergencia-section" style="padding-top:40px; padding-bottom:60px;">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-head" style="margin-bottom:8px;">
+        <span class="eyebrow">03 · Manillas de Emergencia NFC</span>
+        <h2 style="font-size:30px;">Identificación médica y contactos vitales</h2>
+        <p class="sub" style="margin-top:8px;">Caja protectora ergonómica en colores variados con cruz roja de alta visibilidad y lectura NFC inmediata sin batería.</p>
+      </div>
+
+      <div class="config-layout" style="margin-top:32px;">
+        <div>
+          <div class="config-group">
+            <span class="config-label">Uso principal</span>
+            <div class="chip-row" id="emUseOptions">
+              <button class="chip active" data-use="Emergencia médica / RH">Emergencia médica / RH</button>
+              <button class="chip" data-use="Deportistas / Outdoor">Deportistas / Outdoor</button>
+              <button class="chip" data-use="Adultos mayores / Niños">Adultos mayores / Niños</button>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Tipo de correa <span class="opt">(colores variados)</span></span>
+            <div class="chip-row" id="emStrapOptions">
+              <button class="chip active" data-strap="Correa en silicona (colores variados)">Correa en silicona</button>
+              <button class="chip" data-strap="Correa en tela velcro (colores variados)">Correa en tela velcro</button>
+              <button class="chip" data-strap="Solo módulo central NFC">Solo módulo central NFC</button>
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Disponibilidad de colores</span>
+            <div style="padding:12px 16px; border-radius:12px; background:rgba(243,132,135,0.08); border:1px dashed rgba(229,96,101,0.35); font-size:14px; color:var(--ink);">
+              🎨 <strong>Colores variados:</strong> Manejamos diferentes tonos tanto para la caja como para las correas en silicona o tela velcro según disponibilidad en taller. Al cotizar te mostramos los colores disponibles.
+            </div>
+          </div>
+
+          <div class="config-group">
+            <span class="config-label">Notas o datos médicos a incluir <span class="opt">(opcional)</span></span>
+            <textarea id="emNotes" placeholder="Ej: Tipo de sangre O+, contacto de emergencia, alergias, color preferido o cantidad de manillas..."></textarea>
+          </div>
+        </div>
+
+        <div class="config-preview">
+          <div style="width:140px; height:160px; margin:0 auto 14px; display:flex; align-items:center; justify-content:center;">
+            <svg viewBox="0 0 120 180" width="110" height="160" xmlns="http://www.w3.org/2000/svg">
+              <!-- Correa superior -->
+              <path d="M44,10 L76,10 L73,52 L47,52 Z" fill="#201f1f"/>
+              <!-- Correa inferior -->
+              <path d="M47,128 L73,128 L76,170 L44,170 Z" fill="#201f1f"/>
+              <!-- Caja protectora central -->
+              <rect x="34" y="48" width="52" height="84" rx="14" fill="#181818" stroke="#333" stroke-width="2"/>
+              <!-- Cruz Roja -->
+              <rect x="56" y="62" width="8" height="24" rx="2" fill="#e53935"/>
+              <rect x="48" y="70" width="24" height="8" rx="2" fill="#e53935"/>
+              <!-- Pastilla NFC -->
+              <rect x="43" y="96" width="34" height="16" rx="8" fill="#ffffff"/>
+              <text x="60" y="107" text-anchor="middle" fill="#181818" font-family="'Satoshi', sans-serif" font-weight="900" font-size="9">NFC )))</text>
+            </svg>
+          </div>
+
+          <p class="preview-summary" id="emPreviewSummary">Manilla con <strong>Correa en silicona (colores variados)</strong> — perfil para <strong>Emergencia médica / RH</strong>.</p>
+          <div class="preview-note">
+            Al acercar cualquier celular a la manilla se despliega la ficha de emergencia con botones de llamada directa, tipo de sangre, EPS y alergias.
+          </div>
+          <a class="btn btn-primary config-cta" id="emConfigCta" href="#" target="_blank" rel="noopener">Cotizar Manilla por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <p class="footer-note">Designed by Zhezu Studio 3D — © 2026 all rights reserved</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/zhezu_studio3d" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="4.6" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="17.4" cy="6.6" r="1.15" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="https://www.tiktok.com/@zhezu_studio3d" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.6 2.5c.4 2.4 2 4 4.6 4.2v3.2c-1.6.1-3-.4-4.6-1.4v6.7c0 3.6-2.9 6.4-6.5 6.4s-6.5-2.8-6.5-6.4 2.9-6.4 6.5-6.4c.4 0 .8 0 1.2.1v3.3a3.2 3.2 0 0 0-1.2-.2 3.2 3.2 0 1 0 0 6.4c1.9 0 3.4-1.5 3.4-3.5V2.5h3.1Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="https://linktr.ee/zhezustudio3d" target="_blank" rel="noopener" aria-label="Linktree">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3v18M12 3 6.5 8.5M12 3l5.5 5.5M12 9 7.5 13.5M12 9l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="3" r="1.4" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/573208390714?text=Hola%21%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20de%20Zhezu%20Studio%203D." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.82 12.04 21.82C17.5 21.82 21.95 17.37 21.95 11.91C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.68 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.03 20.15C10.56 20.15 9.12 19.76 7.86 19.03L7.56 18.85L4.43 19.67L5.26 16.61L5.06 16.3C4.26 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.04 3.67ZM8.53 6.98C8.37 6.98 8.1 7.04 7.87 7.29C7.65 7.53 7 8.13 7 9.36C7 10.59 7.89 11.78 8.01 11.94C8.14 12.11 9.76 14.68 12.31 15.7C14.43 16.55 14.86 16.38 15.33 16.34C15.8 16.3 16.81 15.74 17.02 15.16C17.24 14.58 17.24 14.08 17.17 13.97C17.11 13.87 16.94 13.81 16.69 13.68C16.44 13.56 15.2 12.95 14.97 12.87C14.74 12.78 14.58 12.74 14.41 12.99C14.25 13.24 13.78 13.81 13.64 13.97C13.5 14.14 13.36 14.16 13.11 14.03C12.86 13.91 12.05 13.64 11.09 12.79C10.35 12.13 9.84 11.32 9.7 11.07C9.56 10.82 9.68 10.69 9.81 10.56C9.92 10.45 10.06 10.26 10.19 10.12C10.31 9.97 10.36 9.87 10.44 9.7C10.53 9.54 10.48 9.4 10.42 9.27C10.36 9.15 9.86 7.9 9.64 7.4C9.44 6.92 9.23 6.98 9.06 6.98H8.53Z" fill="currentColor"/>
+  </svg>
+</a>
+
+<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const waPhone = "573208390714";
+
+  // --- 02. PLACAS MASCOTAS ---
+  let petState = {
+    breed: "Bulldog Francés",
+    name: "Dante",
+    backText: "",
+    colorName: "Café",
+    colorHex: "#7a5e4d",
+    nfc: "Sí, con NFC + perfil web"
+  };
+
+  const petBodyPath = document.getElementById('petBodyPath');
+  const petSvgName = document.getElementById('petSvgName');
+  const petNfcBadge = document.getElementById('petNfcBadge');
+  const petSummary = document.getElementById('petPreviewSummary');
+  const petCta = document.getElementById('petConfigCta');
+
+  function updatePetPreview() {
+    if (!petBodyPath) return;
+    petBodyPath.setAttribute('fill', petState.colorHex);
+    const displayName = petState.name.trim() || "Tu Mascota";
+    petSvgName.textContent = displayName;
+    petNfcBadge.style.display = petState.nfc.startsWith("Sí") ? "inline-block" : "none";
+
+    petSummary.innerHTML = `Placa silueta <strong>${petState.breed}</strong> (${petState.colorName}) con nombre <strong>"${displayName}"</strong> — ${petState.nfc === "Sí, con NFC + perfil web" ? "Con perfil digital NFC y símbolo scan." : "Solo placa física."}`;
+
+    const msg = `Hola Zhezu Studio 3D! Quiero cotizar una *Placa Inteligente para Mascota*:\n• Raza/Silueta: ${petState.breed}\n• Nombre al frente: ${displayName}\n• Texto respaldo: ${petState.backText || 'Por definir'}\n• Color: ${petState.colorName}\n• Tecnología: ${petState.nfc}`;
+    petCta.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(msg)}`;
+  }
+
+  document.querySelectorAll('#petBreedOptions .chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#petBreedOptions .chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      petState.breed = btn.dataset.breed;
+      updatePetPreview();
+    });
+  });
+
+  const petNameInput = document.getElementById('petNameInput');
+  if (petNameInput) {
+    petNameInput.addEventListener('input', (e) => {
+      petState.name = e.target.value;
+      updatePetPreview();
+    });
+  }
+
+  const petBackInput = document.getElementById('petBackText');
+  if (petBackInput) {
+    petBackInput.addEventListener('input', (e) => {
+      petState.backText = e.target.value;
+      updatePetPreview();
+    });
+  }
+
+  document.querySelectorAll('#petColorOptions .swatch').forEach(sw => {
+    sw.addEventListener('click', () => {
+      document.querySelectorAll('#petColorOptions .swatch').forEach(s => s.classList.remove('active'));
+      sw.classList.add('active');
+      petState.colorName = sw.dataset.color;
+      petState.colorHex = sw.dataset.hex;
+      updatePetPreview();
+    });
+  });
+
+  document.querySelectorAll('#petNfcOptions .chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#petNfcOptions .chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      petState.nfc = btn.dataset.nfc;
+      updatePetPreview();
+    });
+  });
+
+  // --- 03. MANILLAS DE EMERGENCIA ---
+  let emState = {
+    use: "Emergencia médica / RH",
+    strap: "Correa en silicona (colores variados)",
+    notes: ""
+  };
+
+  const emSummary = document.getElementById('emPreviewSummary');
+  const emCta = document.getElementById('emConfigCta');
+
+  function updateEmPreview() {
+    if (!emSummary) return;
+    emSummary.innerHTML = `Manilla con <strong>${emState.strap}</strong> — perfil para <strong>${emState.use}</strong>.`;
+    const msg = `Hola Zhezu Studio 3D! Quiero cotizar una *Manilla de Emergencia NFC*:\n• Uso principal: ${emState.use}\n• Correa: ${emState.strap}\n• Notas / Datos médicos: ${emState.notes || 'Por definir'}`;
+    emCta.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(msg)}`;
+  }
+
+  document.querySelectorAll('#emUseOptions .chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#emUseOptions .chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      emState.use = btn.dataset.use;
+      updateEmPreview();
+    });
+  });
+
+  document.querySelectorAll('#emStrapOptions .chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#emStrapOptions .chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      emState.strap = btn.dataset.strap;
+      updateEmPreview();
+    });
+  });
+
+  const emNotesInput = document.getElementById('emNotes');
+  if (emNotesInput) {
+    emNotesInput.addEventListener('input', (e) => {
+      emState.notes = e.target.value;
+      updateEmPreview();
+    });
+  }
+
+  updatePetPreview();
+  updateEmPreview();
+});
+</script>
+</body>
+</html>
